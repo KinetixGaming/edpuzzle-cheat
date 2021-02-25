@@ -22,10 +22,8 @@ function xmlRequest() {
 function jsonData(Data) {
     let i = 0;
     let json = JSON.parse(Data);
-    //console.log(_0x503ax9);
     json['medias'][0]['questions'].forEach((questions) => {
         i++;
-        //console.log(_0x503ax10['body'].innterHTML)
         questions['choices'].forEach((choices) => {
             if(choices['isCorrect'] == true) {
                 var textFinal = choices['body'][0]['html'];
