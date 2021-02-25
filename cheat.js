@@ -1,3 +1,13 @@
+// ==UserScript==
+// @name         Edpuzzle Cheats REAL
+// @version      1
+// @description  Gets Ed Puzzle awnsers
+// @author       Kinetix
+// @match        *://edpuzzle.com/assignments/*
+// @grant        none
+// @run-at       document-end
+// ==/UserScript==
+
 let tries = 0;
 let worked = false;
 
@@ -7,7 +17,7 @@ function retrieveAssignmentID() {
 
 function xmlRequest() {
     const XML = new XMLHttpRequest();
-    XML.open(('GET', `${'https://edpuzzle.com/api/v3/assignments/'}${getAssignment()}${''}`, true));
+    XML.open('GET', `${'https://edpuzzle.com/api/v3/assignments/'}${retrieveAssignmentID()}${''}`, true);
     XML.onerror = (Filler) => {
         worked = false;
         tries++;
