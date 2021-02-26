@@ -1,0 +1,26 @@
+{
+  "name": "edpuzzle",
+  "version": "1.0.0",
+  "description": "edpuzzle hack script",
+  "main": "cheat.js",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node cheat.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KinetixGaming/edpuzzle-cheat.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "KinetixGaming",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/KinetixGaming/edpuzzle-cheat/issues"
+  },
+  "homepage": "https://github.com/KinetixGaming/edpuzzle-cheat#readme"
+}
