@@ -34,14 +34,19 @@ function jsonData(Data) {
     let json = JSON.parse(Data);
     json['medias'][0]['questions'].forEach((questions) => {
         i++;
-        questions['choices'].forEach((choices) => {
+        if (questions.type === 'multiple-choice') {
+            questions['choices'].forEach((choices) => {
             if(choices['isCorrect'] == true) {
                 var textFinal = choices['body'][0]['html'];
                 console.log(`Q${i} - ` + textFinal.replaceAll(/<[^>]*>/ig, ""));
             }
         })
+       } else {
+           console.log(`Q${i} - Written response`);
+       }
 
     })
+    console.info("Sometimes the question order is randomized, look at each question and match it with an answer in the console.")
     alert('Answers are in the console. Open it via Inspect Element. - Kinetix');
 }
 
